@@ -9,7 +9,7 @@ Automated scripts for launching AWS EC2 ARM instances and installing WordPress w
 Open AWS CloudShell in your AWS Console and run:
 
 ```bash
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/aws-ec2-wordpress/main/launch-instance.sh
+curl -O https://raw.githubusercontent.com/Scr1ptW0lf/aws-ec2-wordpress/main/launch-instance.sh
 chmod +x launch-instance.sh
 ./launch-instance.sh
 ```
@@ -21,7 +21,7 @@ Follow the interactive prompts. The script will output your instance's public IP
 SSH into your instance and run:
 
 ```bash
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/aws-ec2-wordpress/main/install-wordpress-apache.sh
+curl -O https://raw.githubusercontent.com/Scr1ptW0lf/aws-ec2-wordpress/main/install-wordpress-apache.sh
 chmod +x install-wordpress-apache.sh
 sudo ./install-wordpress-apache.sh
 ```
