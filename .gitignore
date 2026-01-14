@@ -1,0 +1,22 @@
+# SSH Keys
+*.pem
+
+# Credentials
+*credentials*.txt
+*password*.txt
+
+# Backup files
+*.backup
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
