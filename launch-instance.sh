@@ -248,8 +248,8 @@ if [ "$CREATE_NEW_KEY" == true ]; then
         --query 'KeyMaterial' \
         --output text > "${KEY_NAME}.pem"
     chmod 400 "${KEY_NAME}.pem"
-    echo "  ✓ Key saved to: ${KEY_NAME}.pem"
-    echo "  ⚠️  IMPORTANT: Download this key file from CloudShell if you need it elsewhere!"
+    echo "  Key saved to: ${KEY_NAME}.pem"
+    echo "  IMPORTANT: Download this key file from CloudShell if you need it elsewhere!"
 fi
 
 # Create security group if needed
@@ -365,9 +365,7 @@ else
 fi
 
 echo ""
-echo "=========================================="
-echo "=== Instance Ready ==="
-echo "=========================================="
+echo ""
 echo "Instance ID: $INSTANCE_ID"
 echo "Instance Type: $INSTANCE_TYPE"
 echo "Public IP: $PUBLIC_IP"
@@ -386,23 +384,9 @@ echo ""
 echo "Test web access:"
 echo "  curl http://${PUBLIC_IP}"
 echo ""
-echo "⏱️  Wait 30-60 seconds for SSH to become available"
+echo "  Wait 30-60 seconds for SSH to become available"
 
 if [ "$ALLOCATE_EIP" == "y" ]; then
     echo ""
-    echo "=========================================="
-    echo "⚠️  ELASTIC IP WARNING"
-    echo "=========================================="
-    echo "Elastic IPs cost \$0.005/hour when NOT"
-    echo "associated with a running instance!"
-    echo ""
-    echo "To avoid charges, release the EIP if you"
-    echo "delete the instance:"
-    echo ""
-    echo "aws ec2 release-address \\"
-    echo "  --region $REGION \\"
-    echo "  --allocation-id $ALLOCATION_ID"
+    echo "Don't forget about releasing your elastic IP after instance termination to avoid charges! "
 fi
-
-echo ""
-echo "=========================================="
